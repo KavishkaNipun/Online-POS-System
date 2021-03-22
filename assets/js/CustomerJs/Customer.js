@@ -128,7 +128,7 @@ $("#CustomerID").on('keyup', function (eObj) {
 
     function saveCustomer(custID, custNameF, custNameL, address, phone) {
         let customer = new Customer(custID, custNameF, custNameL, address, phone);
-        customerDB.push(customer);// customer aded
+        customerDB.push(customer);// customer added
 
         // load the table
         loadAllCustomerToTheTable();
@@ -197,7 +197,7 @@ function updateCustomer(custID, custNameF, custNameL, address, phone) {
         $("#phone").val("");
     }
 
-    // genarate
+    // genarateCustomerID
 function generateNewId() {
 
     var lastId = $("#dataTable3 tbody tr:last-child td:first-child").text();
@@ -213,6 +213,43 @@ function generateNewId() {
     }
     return lastId;
 }
+
+// var CustomerRegId=/^(C00-)[0-9]{1,3}$/;
+//
+// $('#CustomerID').on('keydown',function (event) {
+//     var input=(event.key);
+//     let inputID=$('#CustomerID').val();
+//     if (CustomerRegId.test(inputID)){
+//         $('#lblid').text('');
+//         $('#CustomerID').css('border','2px solid lime');
+//         if (input=="Enter"){
+//             $('#First').focus();
+//         }
+//     }else {
+//         $('#CustomerID').css('border','2px solid red');
+//         $('#lblid').text('Your Input Data format Is Wrong(C00-001)');
+//         $('#CustomerID').focus();
+//     }
+// });
+
+// var CustomerName=/^[A-Z]{1}[a-z]{1,9}( )[A-Z]{1}[a-z]{1,9}$/;
+//
+// $('#First').on('keydown',function (event) {
+//     var input=(event.key);
+//     let inputName=$('#First').val();
+//     if (CustomerName.test(inputName)){
+//         $('#lblname').text('');
+//         $('#First').css('border','2px solid lime');
+//         if (input=="Enter"){
+//             $('#input_address').focus();
+//         }
+//     }else {
+//         $('#input_name').css('border','2px solid red');
+//         $('#lblname').text('Your Input Data format Is Wrong(Ex:-Kavishka)');
+//         $('#input_name').focus();
+//     }
+// });
+
 
 function CCC() {
     var input=customerDB.length;

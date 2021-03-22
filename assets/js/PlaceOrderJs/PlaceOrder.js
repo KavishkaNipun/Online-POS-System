@@ -9,7 +9,6 @@ $('#txtDate').val(today);
 
 generatePlaceOrderID();
 
-/////////////////////////////////////////////////////////////////
 function generatePlaceOrderID() {
     try {
         let lastOrderId = PlaceOrder[PlaceOrder.length - 1].getPlaceOrderID();
@@ -26,8 +25,6 @@ function generatePlaceOrderID() {
     }
 
 }
-
-/////////////////////////////////////////////////////////////////
 
 $("#btnAddToTable").click(function () {
 

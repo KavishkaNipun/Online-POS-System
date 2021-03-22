@@ -187,9 +187,6 @@ function clearAllItemText() {
 
 }
 
-// genarate
-
-
     function generateNewIds() {
         try {
             let lastOrderId = itemDB[itemDB.length-1].getIid();
